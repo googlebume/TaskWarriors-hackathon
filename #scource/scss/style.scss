@@ -2,12 +2,15 @@
 @import "adaptive.scss";
 @import "fonts.scss";
 @import "header.scss";
-@import "main_goods.scss";
-@import "constructor.scss";
+@import "main_cards.scss";
 @import "footer.scss";
 @import "popups.scss";
-@import "may-like.scss";
 
+$crimson: #ed7061;
+$bodily: #f3ece4;
+$pale-blue: #505d7d;
+$green: #569e34;
+$padding: 16px;
 
 body {
     font-family: "Rubik", sans-serif;
