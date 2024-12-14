@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -52,6 +53,8 @@ body {
   padding: 16px;
   border-radius: 10px;
   width: 100%;
+  max-width: 450px; /* Максимальна ширина */
+  min-width: 320px; /* Мінімальна ширина */
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
@@ -62,29 +65,17 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
-  max-width: 450px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 450px;
-          flex: 1 0 450px;
   margin: 10px;
-  margin-bottom: 10px;
 }
-@media (max-width: 481px) {
-  .modal .form__container .modal__content .modal__content {
-    width: 350px;
-  }
-}
-.modal .form__container .modal__content .register__user input {
+.modal .form__container .modal__content input {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
-  display: block;
 }
 .modal .form__container .modal__content .user__photo {
-  padding: 0 auto;
   width: 80px;
   margin: 0 auto;
 }
@@ -107,7 +98,6 @@ body {
   cursor: pointer;
   font-size: 16px;
   text-align: center;
-  padding: 10px;
 }
 .modal .form__container .modal__content .submit-btn:hover {
   background-color: #569e34;
@@ -115,17 +105,12 @@ body {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-  .modal {
-    padding: 0;
-  }
   .modal__content {
-    width: 90%;
-    margin: 0 auto;
+    width: 90%; /* Для ширини екрана менше 768px форма займатиме 90% ширини */
   }
-  .user__photo {
-    width: 60px;
-  }
-  .submit-btn {
-    font-size: 14px;
+}
+@media (max-width: 480px) {
+  .modal__content {
+    width: calc(100% - 20px); /* Додаємо відступи для вузьких екранів */
   }
 }

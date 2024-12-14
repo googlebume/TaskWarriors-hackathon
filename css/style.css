@@ -28,6 +28,8 @@ nav, footer, header, aside {
 }
 
 html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -79,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 .profile {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 0 15px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -172,6 +174,82 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #e53935;
 }
 
+/* Загальні змінні для кольорів та відступів */
+header {
+  background-color: #505d7d;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #f3ece4;
+  padding: 12px 16px;
+  margin: 0 -12px;
+}
+header .header__body {
+  display: flex;
+  justify-content: space-between; /* Елементи розділені */
+  align-items: center; /* Вертикальне вирівнювання */
+  flex-wrap: nowrap; /* Заборона переносу елементів */
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Стилізація профілю */
+  /* Стилізація валюти */
+}
+header .header__body .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .header__body .profile__icon {
+  width: 40px;
+  height: 40px;
+}
+header .header__body .profile__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Іконка у формі кола */
+  border: 2px solid #f3ece4;
+}
+header .header__body .profile__name p {
+  margin: 0;
+  padding-right: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ed7061;
+}
+header .header__body .currency {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .header__body .currency__icon {
+  width: 24px;
+  height: 24px;
+}
+header .header__body .currency__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+header .header__body .currency__value p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #f3ece4;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  header .header__body {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  header .header__body .profile,
+  header .header__body .currency {
+    justify-content: center; /* Вирівнювання по центру */
+  }
+}
 .farm {
   display: flex;
   flex-direction: column;
@@ -313,6 +391,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   margin: 0 10px 15px;
   color: #666;
+  flex-grow: 1;
 }
 
 .course-card__button {
@@ -389,31 +468,23 @@ body {
   padding: 16px;
   border-radius: 10px;
   width: 100%;
+  max-width: 450px; /* Максимальна ширина */
+  min-width: 320px; /* Мінімальна ширина */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 450px;
-  flex: 1 0 450px;
   margin: 10px;
-  margin-bottom: 10px;
 }
-@media (max-width: 481px) {
-  .modal .form__container .modal__content .modal__content {
-    width: 350px;
-  }
-}
-.modal .form__container .modal__content .register__user input {
+.modal .form__container .modal__content input {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
-  display: block;
 }
 .modal .form__container .modal__content .user__photo {
-  padding: 0 auto;
   width: 80px;
   margin: 0 auto;
 }
@@ -434,7 +505,6 @@ body {
   cursor: pointer;
   font-size: 16px;
   text-align: center;
-  padding: 10px;
 }
 .modal .form__container .modal__content .submit-btn:hover {
   background-color: #569e34;
@@ -442,20 +512,61 @@ body {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-  .modal {
-    padding: 0;
-  }
   .modal__content {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .user__photo {
-    width: 60px;
-  }
-  .submit-btn {
-    font-size: 14px;
+    width: 90%; /* Для ширини екрана менше 768px форма займатиме 90% ширини */
   }
 }
+@media (max-width: 480px) {
+  .modal__content {
+    width: calc(100% - 20px); /* Додаємо відступи для вузьких екранів */
+  }
+}
+.character {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 auto;
+}
+.character__image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.character__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.character__buttons .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 120px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+.character__buttons .button__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+.character__buttons .button__title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.character__buttons .button__subtitle {
+  font-size: 12px;
+  color: #666;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   position: relative;

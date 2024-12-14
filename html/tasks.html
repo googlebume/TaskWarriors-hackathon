@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/PageTasks.css">
     <title>TaskWarriors</title>
 </head>
 <body>
-    <div class="wrapper">
 <header>
     <div class="header__body">
-        <div class="profile">
+        <a href="/html/profile.html" class="profile">
             <div class="profile__icon">
-                <img src="" alt="icon">
+                <img src="/imgs/icons/user.png" alt="icon">
             </div>
             <div class="profile__name">
-                <p></p>
+                <p>Дузя Сергій</p>
             </div>
-        </div>
+        </a>
         <div class="currency">
             <div class="currency__icon">
-                <img src="" alt="">
+                <img src="/imgs/icons/coin.png" alt="">
             </div>
             <div class="currency__value">
-                <p></p>
+                <p>12</p>
             </div>
         </div>
+        <div class="to-character">
+            <a href="/html/pet.html">До героя!</a>
+        </div>
     </div>
-</header><main>
+</header>    <div class="wrapper">
+<main>
     <div class="farm">
         <div class="farm__card">
             <div class="card__body">
@@ -49,11 +52,12 @@
             </div>
             <div class="card__order">
                 <button class="order__button">
-                    <img src="./imgs/icons/shopping-bag_2.svg" alt="Покупка">
+                    <img src="./../imgs/icons/check.svg" alt="Покупка">
                 </button>
             </div>
         </div>
 
+        <!-- для введення чисел
         <div class="farm__card">
             <div class="card__body">
                 <div class="card__character">
@@ -77,7 +81,7 @@
                     <img src="./imgs/icons/shopping-bag_2.svg" alt="Покупка">
                 </button>
             </div>
-        </div>
+        </div> -->
 
         <div class="farm__card">
             <div class="card__body">
@@ -111,48 +115,10 @@
             </div>
             <div class="card__order">
                 <button class="order__button">
-                    <img src="./imgs/icons/check.svg" alt="Покупка">
+                    <img src="./../imgs/icons/check.svg" alt="Покупка">
                 </button>
             </div>
         </div>
-
-        <div class="farm__card">
-            <div class="card__body">
-                <div class="card__character">
-                    <div class="character__image">
-                        <img src="" alt="character">
-                    </div>
-                </div>
-                <div class="card__test">
-                    <form class="test__form" action="#">
-                        <div class="test__question">
-                            <h3 class="test__task"> Доповніть речення </h3>
-                            <p class="question__message">Zrtcm ... htxtyyz</p>
-                        </div>
-                        <div class="test__answear">
-                            <div class="answear__block">
-                                <label for="angl-lang-1">1</label>
-                                <input type="radio" name="angl-lang" id="angl-lang-1">
-                            </div>
-                            <div class="answear__block">
-                                <label for="angl-lang-2">2</label>
-                                <input type="radio" name="angl-lang" id="angl-lang-2">
-                            </div>
-                            <div class="answear__block">
-                                <label for="angl-lang-3">3</label>
-                                <input type="radio" name="angl-lang" id="angl-lang-3">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="card__order">
-                <button class="order__button">
-                    <img src="./imgs/icons/shopping-bag_2.svg" alt="Покупка">
-                </button>
-            </div>
-        </div>
-    </div>
 </main><footer>
     
 </footer>    </div>

@@ -1,0 +1,191 @@
+// Змінні
+$card-bg: #ffffff;
+$text-color: #333;
+$border-color: #e0e0e0;
+$button-bg: #007bff;
+$button-color: #ffffff;
+$hover-bg: #0056b3;
+
+// Основні стилі
+// body {
+//   font-family: 'Arial', sans-serif;
+//   background-color: #f9f9f9;
+//   color: $text-color;
+//   margin: 0;
+//   padding: 0;
+// }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.farm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 800px;
+}
+
+// Картка
+.farm__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $card-bg;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .card__body {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 20px;
+    padding: 10px;
+
+    .card__character {
+      flex-shrink: 0;
+      flex: 0.35;
+
+      .character__image img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid $border-color;
+      }
+    }
+
+    .card__test {
+      flex-grow: 1;
+      flex: 0.5;
+
+      .test__form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .test__question {
+          .question__message {
+            font-size: 16px;
+            font-weight: 500;
+            color: $text-color;
+          }
+        }
+
+        .test__answear {
+          .answear__input {
+            width: 90%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            outline: none;
+
+            &:focus {
+              border-color: $button-bg;
+              box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+          }
+
+          .answear__block {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            label {
+              font-size: 14px;
+              cursor: pointer;
+            }
+
+            input[type="radio"] {
+              accent-color: $button-bg;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .card__order {
+    flex-shrink: 0;
+    height: 100%;
+    flex: 0.1;
+
+    .order__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $button-bg;
+      color: $button-color;
+      border: none;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 60px;
+      height: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        background-color: $hover-bg;
+      }
+    }
+  }
+}
+
+// Адаптивність
+@media (max-width: 768px) {
+  .farm__card {
+    // flex-direction: column;
+    // align-items: flex-start;
+
+    .card__body {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .card__order {
+      align-self: flex-end;
+    }
+    // .order__button {
+    //   flex: 0.3;
+    // }
+  }
+}
+
+@media (max-width: 450px) {
+  main {
+    padding: 15px 0 0 0;
+  }
+  .farm__card {
+    align-items: center;
+  }
+  .card__order {
+    display: block;
+    height: 40px;
+  }
+  .order__button {
+    // width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+
+}
