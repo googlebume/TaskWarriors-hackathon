@@ -1,11 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(/imgs/fonts/form-font.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  position: relative;
 }
 
 .modal {
@@ -22,6 +18,18 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
   visibility: visible;
+  width: 100vw;
+}
+.modal::before {
+  content: "";
+  background-image: url(/imgs/fonts/form-font.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 .modal.hidden {
   opacity: 0;
@@ -43,8 +51,7 @@ body {
   background: #fff;
   padding: 16px;
   border-radius: 10px;
-  min-height: 320px;
-  width: 450px;
+  width: 100%;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
@@ -55,6 +62,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  max-width: 450px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 450px;
+          flex: 1 0 450px;
   margin: 10px;
   margin-bottom: 10px;
 }
@@ -70,6 +81,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
+  display: block;
 }
 .modal .form__container .modal__content .user__photo {
   padding: 0 auto;

@@ -45,7 +45,7 @@ $padding: 16px;
   
   .course-card__title {
     font-size: 1.5rem;
-    margin: 15px 10px 5px;
+    margin: 15px 10px 12px;
     color: #333;
   }
   
@@ -59,7 +59,7 @@ $padding: 16px;
     display: inline-block;
     margin: 10px 10px 15px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ed7061;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -68,7 +68,7 @@ $padding: 16px;
   }
   
   .course-card__button:hover {
-    background-color: #0056b3;
+    background-color: #ed6f61e9;
   }
   
   /* Модифікатори для тем карток */
