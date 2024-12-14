@@ -8,11 +8,12 @@
     <title>TaskWarriors</title>
 </head>
 <body>
-    <div class="wrapper">
-<div id="modal" class="modal">
-    <form class="modal__content register__user" id="registerForm" action="#">
+    <div class="form-wrapper">
+<!-- <div id="modal" class="modal">
+    <div class="form__container">
+        <form class="modal__content register__user" id="registerForm" action="#">
         <div class="user__photo">
-            <img src="" alt="Ваше фото">
+            <img src="/imgs/icons/user.png" alt="Ваше фото">
         </div>
         <div class="user__name-input">
             <input maxlength="15" type="text" placeholder="Введіть ім'я..." required>
@@ -23,9 +24,30 @@
         <div class="user__password">
             <input type="password" placeholder="Введіть пароль" required>
         </div>
-        <button type="submit" class="submit-btn">Зареєструватися</button>
     </form>
-</div>    </div>
+    <button type="submit" class="submit-btn">Зареєструватися</button>
+    </div>
+</div> -->
+<div id="modal" class="modal">
+    <div class="form__container">
+      <form class="modal__content register__user" id="registerForm" action="#">
+        <div class="user__photo">
+          <img src="/imgs/icons/user.png" alt="Ваше фото">
+        </div>
+        <div class="user__name-input">
+          <input maxlength="15" type="text" placeholder="Введіть ім'я..." required>
+        </div>
+        <div class="user__email">
+          <input type="email" placeholder="Введіть електронну пошту..." required>
+        </div>
+        <div class="user__password">
+          <input type="password" placeholder="Введіть пароль" required>
+        </div>
+        <button type="submit" class="submit-btn">Зареєструватися</button>
+      </form>
+    </div>
+  </div>
+      </div>
 
     <script type="module" src="/js/main.js"></script>
 </body>
