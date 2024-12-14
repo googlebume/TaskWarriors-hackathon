@@ -567,6 +567,57 @@ body {
   color: #666;
 }
 
+.game {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.game__player {
+  display: flex;
+  justify-content: center;
+}
+.game__player-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.game__choices {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.game__choices .choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.game__choices .choice:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+.game__choices .choice__icon {
+  max-width: 100%;
+  height: auto;
+}
+.game__choices .choice--rock {
+  background-color: #f9e6e1;
+}
+.game__choices .choice--scissors {
+  background-color: #e6f1f9;
+}
+.game__choices .choice--paper {
+  background-color: #eaf9e6;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   position: relative;
