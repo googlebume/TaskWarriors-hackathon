@@ -5,6 +5,7 @@
 @import "main_cards.scss";
 @import "footer.scss";
 @import "popups.scss";
+@import "main_form.scss";
 
 $crimson: #ed7061;
 $bodily: #f3ece4;
@@ -24,4 +25,12 @@ main {
     // flex: 1 1 1000px;
     // max-width: 1800px;
     padding: 0 auto;
+    margin: 0 12px 0 12px;
+    background-color: $bodily;
+    padding: 12px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
 }
