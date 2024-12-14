@@ -10,6 +10,7 @@
 }
 
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -77,36 +78,24 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 .farm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 20px; /* Відстань між картками */
 }
 
 .farm__card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 15px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 80%;
-          flex: 1 1 80%;
+  flex: 1 1 80%;
   padding: 20px 0px 20px 20px;
 }
 
@@ -117,13 +106,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .test__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -147,12 +131,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .answear__block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -201,7 +181,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .courses__list {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -213,27 +192,20 @@ h1, h2, h3, h4, h5, h6 {
 .course-card {
   background-color: #fff;
   border-radius: 8px;
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
-  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
   transition: transform 0.3s, box-shadow 0.3s;
-  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .course-card:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .course-card__image {
   width: 100%;
   height: 150px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .course-card__title {
@@ -257,7 +229,6 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
@@ -293,15 +264,9 @@ body {
 }
 
 .modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
@@ -312,16 +277,9 @@ body {
   visibility: hidden;
 }
 .modal .form__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .modal .form__container .modal__content {
   background: #fff;
@@ -329,15 +287,9 @@ body {
   border-radius: 10px;
   min-height: 320px;
   width: 450px;
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
   margin: 10px;
   margin-bottom: 10px;
@@ -361,10 +313,8 @@ body {
   margin: 0 auto;
 }
 .modal .form__container .modal__content .user__photo img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   width: 100%;
   height: auto;
   border-radius: 50%;
