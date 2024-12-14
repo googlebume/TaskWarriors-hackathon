@@ -1,18 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/PageTasks.css">
-    <title>TaskWarriors</title>
-</head>
-<body>
-    <!-- @import "htmls/header.html" -->
-    <div class="wrapper">
-        <!-- @import "htmls/main_tasks.html" -->
-        <!-- @import "htmls/footer.html" -->
-    </div>
-
-    <script type="module" src="/js/main.js"></script>
-</body>
-</html>
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 колонки равной ширины
+    grid-gap: 20px; // Отступы между блоками
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #eaeaea;
+      border-radius: 8px;
+      overflow: hidden;
+  
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+      }
+    }
+  
+    &__image {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
