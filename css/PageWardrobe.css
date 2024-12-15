@@ -190,66 +190,46 @@ header .header__body .currency__value p {
             justify-content: center; /* Вирівнювання по центру */
   }
 }
-.character {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 40px;
-  padding: 0 auto;
-}
-.character__image img {
-  max-width: 500px;
-  height: auto;
+.grid {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-.character__buttons {
+.grid__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 15px;
-}
-.character__buttons .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
-  width: 120px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: #eaeaea;
   border-radius: 8px;
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  cursor: pointer;
+  overflow: hidden;
 }
-.character__buttons .button__image {
+.grid__item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.grid__image {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
-  margin-bottom: 8px;
-}
-.character__buttons .button__title {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-.character__buttons .button__subtitle {
-  font-size: 12px;
-  color: #666;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

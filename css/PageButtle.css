@@ -83,6 +83,7 @@ header {
   color: #f3ece4;
   padding: 12px 16px;
   margin: 0 -12px;
+  margin-bottom: 30px;
 }
 header .header__body {
   display: -webkit-box;
@@ -131,6 +132,17 @@ header .header__body .profile__name p {
   font-weight: 600;
   color: #ed7061;
 }
+header .header__body .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 header .header__body .currency {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,6 +167,13 @@ header .header__body .currency__value p {
   font-size: 16px;
   font-weight: 500;
   color: #f3ece4;
+}
+
+.to-character {
+  padding: 12px 20px;
+  color: #ed7061;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /* Адаптивність */

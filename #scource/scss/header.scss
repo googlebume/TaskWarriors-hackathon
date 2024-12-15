@@ -12,6 +12,7 @@ header {
   color: $secondary-color;
   padding: 12px 16px;
   margin: 0 -12px;
+  margin-bottom: 30px;
 
   .header__body {
     display: flex;
@@ -53,6 +54,12 @@ header {
       }
     }
 
+    .header__container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
     /* Стилізація валюти */
     .currency {
       display: flex;
@@ -80,6 +87,12 @@ header {
       }
     }
   }
+}
+.to-character{
+  padding: 12px 20px;
+  color: #ed7061;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /* Адаптивність */
