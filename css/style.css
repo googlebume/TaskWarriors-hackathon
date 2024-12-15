@@ -542,6 +542,7 @@ body {
 .character {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 40px;
   padding: 0 auto;
 }
